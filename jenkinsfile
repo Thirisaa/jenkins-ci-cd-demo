@@ -8,19 +8,22 @@ parameters{
         choices: ['DEV', 'QA', 'PROD'],
         description: 'select env to deploy'
 )
-
 }
     stages {
         stage('Build') {
             steps {
                 sh 'mvn clean package'
             }
-
         }
         stage ('Test'){
             steps{
                 sh 'mvn test'
             }
         }
+        stage ('Deploy'){
+            steps{
+                sh 'deploying to ${params.env}'
     }
+}
+}
 }
