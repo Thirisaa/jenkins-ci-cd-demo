@@ -22,6 +22,11 @@ parameters{
             }
         }
         stage ('Deploy'){
+            when{
+                expression{    
+                    params.deploy == true
+}
+        }
             steps{
                 echo "deploying to ${params.env}"
     }
