@@ -23,7 +23,7 @@ parameters{
         }
         stage ('Deploy'){
             steps{
-                echo "sh 'deploying to ${params.env}'"
+                echo "deploying to ${params.env}"
     }
 }
 }
