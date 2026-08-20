@@ -8,7 +8,7 @@ parameters{
         choices: ['DEV', 'QA', 'PROD'],
         description: 'select env to deploy'
 )
-}
+
 }
     stages {
         stage('Build') {
