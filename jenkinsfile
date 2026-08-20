@@ -1,4 +1,4 @@
-# added build param
+
 pipeline {
     agent{
         label 'linux'
